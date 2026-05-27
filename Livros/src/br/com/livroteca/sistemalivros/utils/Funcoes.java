@@ -13,7 +13,7 @@ public class Funcoes {
     private static Livro[] cadastro = new Livro[10];
 
     // Funções usadas no menu principal
-    static void inserirLivro() {
+    public static void inserirLivro() {
 
         int tipo = Teclado.lerInteiro("Tipo (1 Físico / 2 Digital): ");
 
@@ -50,7 +50,7 @@ public class Funcoes {
         }
     }
 
-    static void alterarLivro() {
+    public static void alterarLivro() {
         int id = Teclado.lerInteiro("ID do livro a ser alterado: ");
 
         for (Livro livro : cadastro) {
@@ -70,7 +70,7 @@ public class Funcoes {
     }
 
     
-    static void removerLivro() {
+    public static void removerLivro() {
         int id = Teclado.lerInteiro("ID do livro a ser removido: ");
 
         for (int i = 0; i < cadastro.length; i++) {
@@ -83,7 +83,7 @@ public class Funcoes {
         System.out.println("Livro não encontrado");
     }
 
-    static void listarTodos() {
+    public static void listarTodos() {
         System.out.println("\n=== LIVROS CADASTRADOS ===");
         boolean temLivro = false;
 
@@ -96,7 +96,7 @@ public class Funcoes {
         if (!temLivro) System.out.println("Nenhum livro cadastrado");
     }
 
-    static void mostrarValorTotal() {
+    public static void mostrarValorTotal() {
         double total = Livro.calcularValorTotalEstoque(cadastro);
         System.out.println("Valor total do estoque: R$ " + String.format("%.2f", total));
     }
