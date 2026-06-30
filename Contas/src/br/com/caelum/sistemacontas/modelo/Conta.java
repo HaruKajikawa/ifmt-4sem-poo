@@ -5,7 +5,7 @@ package br.com.caelum.sistemacontas.modelo;
  * ela é uma superclasse de ContaCorrente e ContaPoupanca
  */
 
-public class Conta {
+public abstract class Conta {
 
     /**
      *  do cap. 5: proteger os membros da classe (encapsulamento) com os modificadores de acesso
@@ -64,7 +64,7 @@ public class Conta {
 
     // Métodos getters e setters
 
-    public String getTipo() { return "Conta"; }
+    public abstract String getTipo();
 
     public double getSaldo() { return this.saldo; }
 
