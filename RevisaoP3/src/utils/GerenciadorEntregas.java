@@ -60,6 +60,14 @@ public class GerenciadorEntregas {
             return;
         }
 
+        String codigo = Teclado.lerString("\n Código da entrega a alterar: ");
+        int idx = buscarIndicePorCodigo(codigo);
+
+        if (idx == -1) {
+            System.out.println(" Entrega não encontrada");
+            return;
+        }
+
         Entrega e = entregas[idx];
 
         String novoDestinatario = Teclado.lerString(" Destinatário [" + e.getDestinatario() + "]:");
